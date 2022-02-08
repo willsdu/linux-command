@@ -98,7 +98,7 @@ find .
 find /home -name "*.txt"
 ```
 
-同上，但忽略大小写
+在`/home`目录下查找以.txt结尾的文件名，但忽略大小写
 
 ```shell
 find /home -iname "*.txt"
@@ -106,11 +106,7 @@ find /home -iname "*.txt"
 
 当前目录及子目录下查找所有以.txt和.pdf结尾的文件
 
-```shell
-find . \( -name "*.txt" -o -name "*.pdf" \)
-
-或
-
+```
 find . -name "*.txt" -o -name "*.pdf"
 ```
 
@@ -126,7 +122,7 @@ find /usr/ -path "*local*"
 find . -regex ".*\(\.txt\|\.pdf\)$"
 ```
 
-同上，但忽略大小写
+基于正则表达式匹配文件路径，但忽略大小写
 
 ```shell
 find . -iregex ".*\(\.txt\|\.pdf\)$"
